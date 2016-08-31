@@ -1,0 +1,14 @@
+.header-logo {
+  margin: 0 auto;
+  height: 190px;
+}
+
+.header-logo.small {
+  height: 200px;
+  padding: 0;
+}
+
+.introduction {
+  border-radius: 2px;
+  padding: 40px 56px;
+}

@@ -3,16 +3,55 @@ layout: default
 section: blog
 ---
 
-<div class='listing col6 pad4h margin3'>
-  {% for item in site.categories.blog limit:1000 %}
-    {% capture date %}{{ item.date | date: '%B %Y' }}{% endcapture %}
-    {% capture ndate %}{{ item.next.date | date: '%B %Y' }}{% endcapture %}
+{% for item in site.categories.blog limit:1000 %}
+  <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
 
-    {% if date != ndate %}
-      <h4 class='month'>{{item.date | date: '%B %Y'}}</h4>
+    {% if item.type == "preview-image" %}
+
+    <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--teal-100 mdl-color-text--white">
+    <i class="material-icons">play_circle_filled</i>
+  </header>
+    <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
+    <div class="mdl-card__supporting-text">
+      <h4>{{item.title}}<span class='date'>&#126; {{item.date | date:"%b %d"}}</span></h4>
+      {{item.description}}
+    </div>
+    <div class="mdl-card__actions">
+      <a href="#" class="mdl-button">Go</a>
+    </div>
+  </div>
+    <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn{{forloop.index}}">
+    <i class="material-icons">more_vert</i>
+  </button>
+    <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn{{forloop.index }}">
+    <li class="mdl-menu__item">Lorem</li>
+    <li class="mdl-menu__item" disabled>Ipsum</li>
+    <li class="mdl-menu__item">Dolor</li>
+  </ul>
+
     {% endif %}
-    <a class='item' href='{{site.baseurl}}{{item.url}}'>{{item.title}} <span class='date'>&#126; {{item.date | date:"%b %d"}}</span></a>
-  {% endfor %}
-</div>
 
-{% include rss-link.html %}
+    {% if item.type == "minimal" %}
+      <div class="mdl-card mdl-cell mdl-cell--12-col">
+    <div class="mdl-card__supporting-text">
+      <h4>{{item.title}}</h4>
+      {{item.description}}
+    </div>
+    <div class="mdl-card__actions">
+      <a href="#" class="mdl-button">Go</a>
+    </div>
+  </div>
+      <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn3">
+    <i class="material-icons">more_vert</i>
+  </button>
+      <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn3">
+    <li class="mdl-menu__item">Lorem</li>
+    <li class="mdl-menu__item" disabled>Ipsum</li>
+    <li class="mdl-menu__item">Dolor</li>
+  </ul>
+    {% endif %}
+
+  </section>
+{% endfor %}
+
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp"></section>

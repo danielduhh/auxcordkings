@@ -2,6 +2,8 @@
 published: true
 category: blog
 layout: blog
+description: This is the description to the post called Untitled
+type: preview-image
 splash: "http://placehold.it/1600x500"
 ---
 

@@ -4,6 +4,8 @@ published: true
 category: blog
 splash: "http://placehold.it/1600x500"
 tags: null
+type: preview-image
+description: This is the description to the post called Untitled
 title: Untitled
 ---
 
