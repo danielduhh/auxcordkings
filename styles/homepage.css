@@ -7,12 +7,37 @@ body {
   height: 190px;
 }
 
-.header-logo.small {
-  height: 200px;
-  padding: 0;
+@media (min-width: 840px) {
+  .introduction {
+    padding: 45px 20px 15px 20px;
+  }
+
+  .header-background {
+    background: rgb(228, 228, 228) !important;
+  }
 }
 
-.introduction {
-  border-radius: 2px;
-  padding: 40px 56px;
+@media (max-width: 840px) {
+
+  .header-logo.small {
+    height: 100px;
+    padding: 0;
+  }
+
+  .introduction {
+    padding: 0px 20px;
+  }
+
+}
+
+.blog-thumb {
+  max-height: 200px !important;
+  overflow: hidden;
+  background: white !important;
+  margin: 0;
+  width: 100% !important;
+}
+
+.blog-thumb img {
+  width: 100%;
 }
