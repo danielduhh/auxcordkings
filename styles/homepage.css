@@ -4,7 +4,7 @@ body {
 
 .header-logo {
   margin: 0 auto;
-  height: 190px;
+  height: 70px;
 }
 
 @media (min-width: 840px) {
@@ -20,7 +20,7 @@ body {
 @media (max-width: 840px) {
 
   .header-logo.small {
-    height: 100px;
+    height: 60px;
     padding: 0;
   }
 
@@ -28,6 +28,12 @@ body {
     padding: 0px 20px;
   }
 
+  .mdl-demo main > .mdl-layout__tab-panel {
+    padding: 0;
+  }
+  .head-logo-container {
+    text-align: center;
+  }
 }
 
 .blog-thumb {

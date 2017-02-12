@@ -1,0 +1,21 @@
+#blog .hero-image{
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 325px;
+    width: 100%;
+}
+
+#blog .blog-container{
+    padding: 8px;
+}
+
+.mdl-demo main > .mdl-layout__tab-panel {
+    padding: 0;
+}
+
+
+@media (max-width: 840px) {
+    .head-logo-container {
+        text-align: left;
+    }
+}

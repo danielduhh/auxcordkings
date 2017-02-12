@@ -3,6 +3,10 @@ layout: default
 section: blog
 ---
 
+<div class="introduction mdl-color--white content mdl-color-text--grey-800 mdl-cell mdl-cell--12-col">
+    {{site.data.home.about}}
+</div>
+
 <div class="mdl-grid">
 
 {% for item in site.categories.blog limit:1000 %}
@@ -18,11 +22,11 @@ section: blog
 
     <div class="mdl-card mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone">
         <div class="mdl-card__supporting-text">
-            <h4>{{item.title}} <span class='date'> ~ {{item.date | date:"%b %d"}}</span></h4>
+            <h4>{{item.pageTitle}} <span class='date'> ~ {{item.date | date:"%b %d"}}</span></h4>
             {{item.description}}
         </div>
         <div class="mdl-card__actions">
-            <a href="#" class="mdl-button">Go</a>
+            <a  href="{{site.baseurl}}{{item.url}}" class="mdl-button">Go</a>
         </div>
     </div>
 
@@ -44,11 +48,11 @@ section: blog
 
     <div class="mdl-card mdl-cell mdl-cell--12-col">
         <div class="mdl-card__supporting-text">
-            <h4>{{item.title}}</h4>
+            <h4>{{item.pageTitle}}</h4>
             {{item.description}}
         </div>
         <div class="mdl-card__actions">
-            <a href="#" class="mdl-button">Go</a>
+            <a href="{{site.baseurl}}{{item.url}}" class="mdl-button">Go</a>
         </div>
     </div>
     <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn3">
