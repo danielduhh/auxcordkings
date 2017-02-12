@@ -6,7 +6,7 @@ splash: "Boomer1.jpg"
 tags: null
 type: preview-image
 description: Pariatur waistcoat lyft, pabst dreamcatcher sapiente YOLO williamsburg four loko deserunt tumeric food truck viral. 
-pageTitle: Pariatur waistcoat
+postTitle: Pariatur waistcoat
 ---
 
 

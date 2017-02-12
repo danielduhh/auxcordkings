@@ -17,16 +17,16 @@ section: blog
 
     <header class="blog-thumb section__play-btn mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-color--teal-100 mdl-color-text--white">
         <!--<i class="material-icons">play_circle_filled</i>-->
-        <img src="images/{{item.splash}}"/>
+        <a href="{{site.baseurl}}{{item.url}}"><img src="images/{{item.splash}}"/></a>
     </header>
 
     <div class="mdl-card mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone">
         <div class="mdl-card__supporting-text">
-            <h4>{{item.pageTitle}} <span class='date'> ~ {{item.date | date:"%b %d"}}</span></h4>
+            <a href="{{site.baseurl}}{{item.url}}"><h4>{{item.postTitle}} <span class='date'> ~ {{item.date | date:"%b %d"}}</span></h4></a>
             {{item.description}}
         </div>
         <div class="mdl-card__actions">
-            <a  href="{{site.baseurl}}{{item.url}}" class="mdl-button">Go</a>
+            <a href="{{site.baseurl}}{{item.url}}" class="mdl-button">Go</a>
         </div>
     </div>
 
@@ -48,7 +48,7 @@ section: blog
 
     <div class="mdl-card mdl-cell mdl-cell--12-col">
         <div class="mdl-card__supporting-text">
-            <h4>{{item.pageTitle}}</h4>
+            <a href="{{site.baseurl}}{{item.url}}"><h4>{{item.postTitle}}</h4></a>
             {{item.description}}
         </div>
         <div class="mdl-card__actions">
